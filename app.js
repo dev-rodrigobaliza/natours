@@ -20,6 +20,8 @@ const bookingRouter = require('./routes/bookingRoutes');
 const authRouter = require('./routes/authRoutes');
 
 const app = express();
+//enable permission to proxies
+app.enable('trust proxy', true);
 //set template engine to html
 app.set('view engine', 'pug');
 //set template files path
