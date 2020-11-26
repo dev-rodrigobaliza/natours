@@ -29,6 +29,8 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 //implement cors
 app.use(cors());
+//respond to pre flight phase from browsers with cors module
+app.options('*', cors());
 //set static files path
 app.use(express.static(path.join(__dirname, 'public')));
 //set security http headers
