@@ -36,7 +36,6 @@ const userDataForm = document.querySelector('.form-user-data');
 if (userDataForm) {
   userDataForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    console.log(document.getElementById('photo').files);
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
